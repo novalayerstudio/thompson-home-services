@@ -39,7 +39,7 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <p className="font-semibold text-primary">Call or Text</p>
+                    <p className="font-semibold text-primary">Phone</p>
                     <a href="tel:912-388-6690" className="text-muted-foreground hover:text-accent transition-smooth">
                       912-388-6690
                     </a>
@@ -200,7 +200,7 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                 >
                   Request Free Consultation
                 </Button>
@@ -209,21 +209,6 @@ const Contact = () => {
           </Card>
         </div>
 
-        {/* Emergency Call Section */}
-        <div className="mt-16 text-center p-8 bg-primary rounded-lg text-primary-foreground">
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Emergency Garage Door Repair?
-          </h3>
-          <p className="text-lg mb-6 opacity-90">
-            Don't wait! Call us now for immediate assistance with urgent garage door issues.
-          </p>
-          <a href="tel:912-388-6690">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-              <Phone className="w-5 h-5 mr-2" />
-              Emergency Call: 912-388-6690
-            </Button>
-          </a>
-        </div>
       </div>
     </section>
   );

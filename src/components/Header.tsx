@@ -16,8 +16,9 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="text-2xl font-bold text-primary">
-          Thompson Home Services
+        <div className="flex items-center space-x-3">
+          <img src="/lovable-uploads/0ced6b97-3d45-4fb0-9d88-e2e3af30383a.png" alt="Thompson Home Services Logo" className="h-10 w-auto" />
+          <span className="text-xl font-bold text-primary hidden sm:block">Thompson Home Services</span>
         </div>
 
         {/* Desktop Navigation */}
