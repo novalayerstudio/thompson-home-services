@@ -66,7 +66,7 @@ const Footer = () => {
                 <span>Facebook</span>
               </a>
               <a 
-                href="https://www.google.com/search?q=Thompson%20Home%20Services"
+                href="https://www.google.com/search?sca_esv=c2df872898b90107&sxsrf=AE3TifP-Pwn-3MLV2tkag2VEew7stSBPEw%3A1753560105668&q=Thompson%20Home%20Services&stick=H4sIAAAAAAAAAONgU1IxqEhMMzROSTE0TzM1TUlNMbUyqEiyTDYyNk40SjEwNTI0NTBZxCoWkpGfW1Ccn6fgkZ-bqhCcWlSWmZxaDABL0QYSQQAAAA&mat=Cfk4e3SHO7Ku&ved=2ahUKEwi4_sK5qNuOAxVukWoFHbWDJsYQrMcEegQIIxAC"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-primary-foreground/80 hover:text-accent transition-smooth"

@@ -144,11 +144,9 @@ const About = () => {
             Contact us today for your free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:912-388-6690">
-              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                Get Free Consultation
+              <Button onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })} size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                Get A Free Consultation
               </Button>
-            </a>
             <Button 
               size="lg" 
               variant="outline" 

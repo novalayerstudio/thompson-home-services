@@ -1,54 +1,104 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { 
-  Wrench, 
-  Settings, 
-  Zap, 
-  RotateCcw, 
-  Radio, 
+import {
+  Wrench,
+  Settings,
+  Zap,
+  RotateCcw,
+  Radio,
   Cable,
   CheckCircle
 } from "lucide-react";
-import technicianImage from "@/assets/technician-service.jpg";
-import springsImage from "@/assets/garage-springs.jpg";
+
+import technicianImage from "@/assets/technician-service.png";
+import springsImage from "@/assets/garage-springs.png";
+
+import fullGarage from "@/assets/full-garage.png";
+import overhead from "@/assets/over-head.png";
+import springRep from "@/assets/spring-rep.png";
+import rollerRep from "@/assets/roller-rep.png";
+import remoteAct from "@/assets/remote-act.png";
+import cableRep from "@/assets/cable-rep.png";
 
 const Services = () => {
   const services = [
     {
       icon: <Settings className="w-8 h-8" />,
       title: "Full Garage Door System Service & Tune Up",
-      description: "Don't wait for a breakdown — regular garage door service keeps everything running safely, smoothly, and quietly. We do a 25 point inspection and service to reduce noise, avoid breakdown, and ensure confidence.",
-      features: ["25-point inspection", "Noise reduction", "Safety check", "Preventive maintenance"]
+      description:
+        "Don't wait for a breakdown — regular garage door service keeps everything running safely, smoothly, and quietly. We do a 25 point inspection and service to reduce noise, avoid breakdown, and ensure confidence.",
+      features: [
+        "25-point inspection",
+        "Noise reduction",
+        "Safety check",
+        "Preventive maintenance"
+      ],
+      image: fullGarage
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Overhead Garage Door Opener Repair",
-      description: "If your overhead garage door opener is stalling, grinding, or unresponsive, it's time for a fix! Restore smooth, reliable access to your garage with fast, expert opener repair.",
-      features: ["Motor repair", "Chain/belt replacement", "Remote programming", "Safety sensor adjustment"]
+      description:
+        "If your overhead garage door opener is stalling, grinding, or unresponsive, it's time for a fix! Restore smooth, reliable access to your garage with fast, expert opener repair.",
+      features: [
+        "Motor repair",
+        "Chain/belt replacement",
+        "Remote programming",
+        "Safety sensor adjustment"
+      ],
+      image: overhead
     },
     {
       icon: <RotateCcw className="w-8 h-8" />,
       title: "Garage Door Spring Replacement",
-      description: "A broken garage door spring can leave you stuck and struggling — it's the muscle behind every smooth lift. Replace worn springs to keep your door balanced, safe, and working like new!",
-      features: ["Torsion spring repair", "Extension spring replacement", "Safety cable installation", "Balance adjustment"]
+      description:
+        "A broken garage door spring can leave you stuck and struggling — it's the muscle behind every smooth lift. Replace worn springs to keep your door balanced, safe, and working like new!",
+      features: [
+        "Torsion spring repair",
+        "Extension spring replacement",
+        "Safety cable installation",
+        "Balance adjustment"
+      ],
+      image: springRep
     },
     {
       icon: <Wrench className="w-8 h-8" />,
       title: "Garage Door Roller Replacement",
-      description: "Worn-out garage door rollers can cause noisy, jerky movement and put extra strain on your opener — replacing them keeps your door gliding smoothly and quietly.",
-      features: ["Steel roller installation", "Nylon roller upgrade", "Track alignment", "Noise elimination"]
+      description:
+        "Worn-out garage door rollers can cause noisy, jerky movement and put extra strain on your opener — replacing them keeps your door gliding smoothly and quietly.",
+      features: [
+        "Steel roller installation",
+        "Nylon roller upgrade",
+        "Track alignment",
+        "Noise elimination"
+      ],
+      image: rollerRep
     },
     {
       icon: <Radio className="w-8 h-8" />,
       title: "Remote Control Activation & Installation",
-      description: "Tired of getting out of the car to open your garage? Upgrade to remote control activation for easy, push-button access. We'll handle the install so you can enjoy convenience at your fingertips!",
-      features: ["Remote programming", "Keypad installation", "Smart home integration", "Multi-remote setup"]
+      description:
+        "Tired of getting out of the car to open your garage? Upgrade to remote control activation for easy, push-button access. We'll handle the install so you can enjoy convenience at your fingertips!",
+      features: [
+        "Remote programming",
+        "Keypad installation",
+        "Smart home integration",
+        "Multi-remote setup"
+      ],
+      image: remoteAct
     },
     {
       icon: <Cable className="w-8 h-8" />,
       title: "Garage Door Cable Replacement",
-      description: "Frayed or snapped garage door cables can leave your door crooked or stuck — and dangerous. Keep things running safely and smoothly with fast, reliable cable replacement!",
-      features: ["Cable inspection", "High-quality replacement", "Safety compliance", "Tension adjustment"]
+      description:
+        "Frayed or snapped garage door cables can leave your door crooked or stuck — and dangerous. Keep things running safely and smoothly with fast, reliable cable replacement!",
+      features: [
+        "Cable inspection",
+        "High-quality replacement",
+        "Safety compliance",
+        "Tension adjustment"
+      ],
+      image: cableRep
     }
   ];
 
@@ -60,21 +110,28 @@ const Services = () => {
             Professional Garage Door Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We offer full service and repair on all garage door applications to fulfill your needs! 
-            We have trained technicians who get the job done safely and quickly.
+            We offer full service and repair on all garage door applications to
+            fulfill your needs! We have trained technicians who get the job done
+            safely and quickly.
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card key={index} className="shadow-card hover:shadow-elegant transition-smooth animate-fade-in bg-card border-border">
+            <Card
+              key={index}
+              className="shadow-card hover:shadow-elegant transition-smooth animate-fade-in bg-card border-border"
+            >
               <CardHeader>
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4">
-                  <div className="text-accent">
-                    {service.icon}
-                  </div>
+                  <div className="text-accent">{service.icon}</div>
                 </div>
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-40 object-cover rounded-md mb-4"
+                />
                 <CardTitle className="text-xl font-bold text-primary">
                   {service.title}
                 </CardTitle>
@@ -85,7 +142,10 @@ const Services = () => {
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-foreground">
+                    <li
+                      key={idx}
+                      className="flex items-center text-sm text-foreground"
+                    >
                       <CheckCircle className="w-4 h-4 text-accent mr-2 flex-shrink-0" />
                       {feature}
                     </li>
@@ -99,9 +159,9 @@ const Services = () => {
         {/* Images Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div className="relative overflow-hidden rounded-lg shadow-card">
-            <img 
-              src={technicianImage} 
-              alt="Professional technician servicing garage door" 
+            <img
+              src={technicianImage}
+              alt="Professional technician servicing garage door"
               className="w-full h-64 lg:h-80 object-cover transition-smooth hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end">
@@ -111,11 +171,11 @@ const Services = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="relative overflow-hidden rounded-lg shadow-card">
-            <img 
-              src={springsImage} 
-              alt="High-quality garage door components" 
+            <img
+              src={springsImage}
+              alt="High-quality garage door components"
               className="w-full h-64 lg:h-80 object-cover transition-smooth hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end">
@@ -137,12 +197,19 @@ const Services = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:912-388-6690">
-              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Button
+                size="lg"
+                className="bg-accent text-accent-foreground hover:bg-accent/90"
+              >
                 Call 912-388-6690
               </Button>
             </a>
             <a href="mailto:contact@thompsonhomes.info">
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              >
                 Email Us
               </Button>
             </a>
