@@ -209,6 +209,21 @@ const Contact = () => {
           </Card>
         </div>
 
+        {/* Emergency Call Section */}
+        <div className="mt-16 text-center p-8 bg-primary rounded-lg text-primary-foreground">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            Emergency Garage Door Repair?
+          </h3>
+          <p className="text-lg mb-6 opacity-90">
+            Don't wait! Call us now for immediate assistance with urgent garage door issues.
+          </p>
+          <a href="tel:912-388-6690">
+            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Phone className="w-5 h-5 mr-2" />
+              Emergency Call: 912-388-6690
+            </Button>
+          </a>
+        </div>
       </div>
     </section>
   );
